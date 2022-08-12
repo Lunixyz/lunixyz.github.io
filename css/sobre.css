@@ -59,6 +59,12 @@ body {
     font-size: 30px;
     animation: right 2.4s
   }
+  footer a:hover span {
+    display: none
+  }
+  footer a:hover:before {
+    content: ">"
+  }
   @keyframes right {
     from {
       margin-left: -100%;
