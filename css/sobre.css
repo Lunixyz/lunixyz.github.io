@@ -21,24 +21,24 @@ body {
     color: rgb(145, 145, 144);
     font-family: monospace;
     overflow: hidden;
-    border-right: .15em solid rgb(238,232,170);
     white-space: nowrap; 
     margin: 0 auto;
     font-size: 40px;
     color: rgb(176,224,230);
-    animation: 
-      typing 2s steps(50, end),
+    animation:
+      left 1s,
+      typing 1s steps(50, end),
       blink-caret .75s step-end infinite;
   }
   .tp p {
     color: rgb(216,191,216);
     font-family: monospace;
     overflow: hidden;
-    border-right: .15em solid rgb(238,232,170);
     white-space: nowrap; 
     margin: 0 auto;
     font-size: 40px;
     animation: 
+      right 2s,
       typing 2s steps(50, end),
       blink-caret .75s step-end infinite;
   }
@@ -71,5 +71,29 @@ body {
     }
     to {
       margin-left: 0;
+    }
+  }
+  @keyframes right {
+    from {
+      margin-right: -80%;
+    }
+    to {
+      margin-right: 0;
+    }
+  }
+  @keyframes left {
+    from {
+      margin-left: -80%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+  @keyframes up {
+    from {
+      margin-top: -80%;
+    }
+    to {
+      margin-top: 0;
     }
   }
