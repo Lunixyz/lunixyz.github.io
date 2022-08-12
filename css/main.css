@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.81)), 
+   url("/img/yes.png");
+  -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
+.waviy {
+  position: relative;
+  animation: left 2s;
+}
+.waviy p {
+  position: relative;
+  display: inline-block;
+  font-size: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 5s infinite;
+  text-shadow: 5px 5px #000000;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+
+}
+@keyframes right {
+  from {
+    margin-right: -80%;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes left {
+  from {
+    margin-left: -80%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes up {
+  from {
+    margin-top: -80%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+.tp h1 {
+  color: rgb(145, 145, 144);
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid rgb(255, 255, 255);
+  white-space: nowrap; 
+  margin: 0 auto;
+  font-size: 40px;
+  animation: 
+    typing 1.7s steps(50, end),
+    blink-caret .75s step-end infinite;
+}
+.sobre{
+  text-decoration: none;
+  color: inherit;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
+}
+.aligned {
+  animation: up 2s;
+}
